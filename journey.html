@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex Tarot | The Journey</title>
+    <link rel="shortcut icon" href="Your_Future_Will_Be_Bright____Black___Nikury_Sticker-removebg-preview.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            border-bottom: 1px solid #222;
+            position: relative;
+            background: #000;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: lightpink;
+            font-size: 1.5rem;
+            text-shadow: 0 0 10px rgba(255, 182, 193, 0.7);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ffffff;
+            margin-left: 30px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            transition: 0.3s;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: lightpink;
+            text-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            border: none;
+            background: none;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: lightpink;
+            transition: 0.3s;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background:url(journey-img/download\ \(14\).jpg);
+            background-size: center;
+            background-position: center;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px white;
+        }
+
+        .hero p {
+            color: white;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 0 0 5px white;
+        }
+
+        .journey-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .step {
+            border: 1px solid #222;
+            padding: 40px;
+            margin-bottom: 30px;
+            background-color: #050505;
+            border-radius: 10px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .step:hover {
+            border-color: lightpink;
+            box-shadow: 0 0 15px rgba(255, 182, 193, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+        .step:hover .step-image {
+            border-color: lightpink;
+        }
+
+        .step-number {
+            color: lightpink;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .step h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #fff;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+
+        .step p {
+            line-height: 1.8;
+            color: #cccccc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #444;
+            font-size: 0.8rem;
+            border-top: 1px solid #111;
+            letter-spacing: 1px;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #000;
+                flex-direction: column;
+                padding: 20px 0;
+                border-bottom: 1px solid #222;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 15px 0;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">VORTEX</div>
+        
+        <button class="hamburger" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="reading.html">Oracle</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>The Journey</h1>
+        <p>Walking through the 22 Chapters of the Soul</p>
+    </header>
+
+    <main class="journey-content">
+
+        <div class="step">
+            <img src="journey-img/download (8).jpg" alt="The Beginning" class="step-image">
+            <div class="step-content">
+                <span class="step-number">STEP 01</span>
+                <h2>The Beginning</h2>
+                <p>Every journey starts with a single, blind step. The vibe here is pure potential—the feeling of standing on the edge of a great cliff and deciding to jump, trusting that wings will grow on the way down.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <img src="journey-img/download (9).jpg" alt="The Inner Vision" class="step-image">
+            <div class="step-content">
+                <span class="step-number">STEP 02</span>
+                <h2>The Inner Vision</h2>
+                <p>As you move deeper into the vortex, the outside world fades. You begin to see with your heart instead of your eyes. This is the stage of intuition, where you listen to the whispers of the moon and the secrets of the dark.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <img src="journey-img/warrior princess.jpg" alt="The Transformation" class="step-image">
+            <div class="step-content">
+                <span class="step-number">STEP 03</span>
+                <h2>The Transformation</h2>
+                <p>The middle of the journey is the hardest. You must let go of who you were to become who you are meant to be. It is a period of deep change, like a snake shedding its skin to reveal a brighter, stronger version of itself.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <img src="journey-img/img1.jpg" alt="The Completion" class="step-image">
+            <div class="step-content">
+                <span class="step-number">STEP 04</span>
+                <h2>The Completion</h2>
+                <p>The vortex comes full circle. You arrive back where you started, but you are not the same. You have gained the wisdom of the 22 archetypes, and now the world is open to you in a way it never was before.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 VORTEX TAROT • THE SOUL'S PATH</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

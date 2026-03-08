@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Destiny | Vortex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="Your_Future_Will_Be_Bright____Black___Nikury_Sticker-removebg-preview.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .reset-container {
+            width: 100%;
+            max-width: 380px;
+            padding: 40px 25px;
+            background: #0a0a0a;
+            border: 1px solid #222;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(255, 182, 193, 0.05);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 2em;
+            color: #FFB6C1;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .instructions {
+            font-size: 0.9em;
+            color: #aaa;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.75em;
+            color: #FFB6C1;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px;
+            background: #141414;
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #FFB6C1;
+        }
+
+        .action-link {
+            text-decoration: none;
+            display: block;
+            width: 100%;
+        }
+
+        .reset-btn {
+            width: 100%;
+            padding: 14px;
+            background: transparent;
+            border: 1px solid #FFB6C1;
+            color: #FFB6C1;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .reset-btn:hover {
+            background: #FFB6C1;
+            color: #000;
+        }
+
+        .back-to-login {
+            margin-top: 25px;
+            display: block;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.85em;
+        }
+
+        .back-to-login:hover {
+            color: #FFB6C1;
+        }
+
+        @media (max-width: 480px) {
+            .reset-container {
+                border: none;
+                background: transparent;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="reset-container">
+        <a href="index.html" class="logo">Vortex</a>
+        <p class="instructions">Lost your way? Enter your email and we will send a cosmic link to reset your password.</p>
+
+        <form action="accept.html">
+            <div class="form-group">
+                <label>Recovery Email</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+
+            <a  class="action-link">
+                <button type="submit" class="reset-btn">Send Link</button>
+            </a>
+        </form>
+
+        <a href="login.html" class="back-to-login">← Back to Login</a>
+    </div>
+
+</body>
+</html>

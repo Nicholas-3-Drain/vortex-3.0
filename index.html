@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex | Home</title>
+    <link rel="icon" type="image/x-icon" href="Your_Future_Will_Be_Bright____Black___Nikury_Sticker-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-top-row">
+            <a href="#" class="logo">Vortex</a>
+            
+            <div class="mobile-right-group">
+                <div class="cart-icon" id="mobileCart">🛒 <span class="cart-text">Cart:</span> <span id="cartCount">0</span></div>
+                
+                <div class="menu-toggle" id="mobileMenu" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-center-group" id="navCenter">
+            <ul class="nav-links">
+                <li><a href="register.html">Oracle</a></li>
+                <li><a href="journey.html">Journey</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="search-container">
+                <span class="search-icon" id="searchIcon">🔍</span>
+                <input type="text" class="search-bar" id="searchInput" placeholder="Search...">
+            </div>
+            
+            <div class="cart-icon desktop-cart">🛒 <span class="cart-text">Cart:</span> <span id="cartCountDesktop">0</span></div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h2>Unveil Your Destiny</h2>
+        <p>Explore our curated collection of premium tarot decks and experience profound professional readings tailored to guide your spiritual journey.</p>
+    </section>
+
+    <div class="container" id="products">
+        <div class="product-grid" id="productGrid">
+            
+            <div class="product-card">
+                <img src="cards-img/photo_2026-03-07_09-47-24.jpg" alt="Velvet Nights" class="card-image">
+                <h3>Velvet Nights</h3>
+                <p class="price">$45.00</p>
+                <button class="action-btn" onclick="handlePurchase(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cards-img/photo_2026-03-07_09-47-29.jpg" alt="Pink Aura" class="card-image">
+                <h3>Pink Aura</h3>
+                <p class="price">$35.00</p>
+                <button class="action-btn" onclick="handlePurchase(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cards-img/photo_2026-03-07_09-47-30.jpg" alt="Shadow Work" class="card-image">
+                <h3>Shadow Work</h3>
+                <p class="price">$50.00</p>
+                <button class="action-btn" onclick="handlePurchase(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cards-img/photo_2026-03-07_09-47-32.jpg" alt="Cosmic Guidance" class="card-image">
+                <h3>Guidance</h3>
+                <p class="price">$42.00</p>
+                <button class="action-btn" onclick="handlePurchase(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cards-img/photo_2026-03-07_09-47-34.jpg" alt="Moon Child" class="card-image">
+                <h3>Moon Child</h3>
+                <p class="price">$38.00</p>
+                <button class="action-btn" onclick="handlePurchase(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cards-img/photo_2026-03-07_09-47-36.jpg" alt="Crystal Visions" class="card-image">
+                <h3>Crystal</h3>
+                <p class="price">$55.00</p>
+                <button class="action-btn" onclick="handlePurchase(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cards-img/photo_2026-03-07_09-47-38.jpg" alt="Ancient Whispers" class="card-image">
+                <h3>Ancient Whispers</h3>
+                <p class="price">$40.00</p>
+                <button class="action-btn" onclick="handlePurchase(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cards-img/photo_2026-03-07_09-47-44.jpg" alt="Starseed Oracle" class="card-image">
+                <h3>Starseed Oracle</h3>
+                <p class="price">$48.00</p>
+                <button class="action-btn" onclick="handlePurchase(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cards-img/tarrot-img6.jpg" alt="Divine Feminine" class="card-image">
+                <h3>Feminine</h3>
+                <p class="price">$60.00</p>
+                <button class="action-btn" onclick="handlePurchase(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cards-img/tarot-img1.jpg" alt="Eclipse" class="card-image">
+                <h3>Eclipse</h3>
+                <p class="price">$32.00</p>
+                <button class="action-btn" onclick="handlePurchase(this)">Buy</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="cards-img/tarot-img2.jpg" alt="Velvet Nights" class="card-image">
+                <h3>Velvet Nights</h3>
+                <p class="price">$45.00</p>
+                <button class="action-btn" onclick="handlePurchase(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cards-img/tarot-img3.jpg" alt="Pink Aura" class="card-image">
+                <h3>Pink Aura</h3>
+                <p class="price">$35.00</p>
+                <button class="action-btn" onclick="handlePurchase(this)">Buy</button>
+            </div> 
+            
+            <div class="product-card">
+                <img src="cards-img/tarot-img5.jpg" alt="Shadow Work" class="card-image">
+                <h3>Shadow Work</h3>
+                <p class="price">$50.00</p>
+                <button class="action-btn" onclick="handlePurchase(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cards-img/tarot-img4.jpg" alt="Cosmic Guidance" class="card-image">
+                <h3>Guidance</h3>
+                <p class="price">$42.00</p>
+                <button class="action-btn" onclick="handlePurchase(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="cards-img/tarot-img7.png" alt="Moon Child" class="card-image">
+                <h3>Moon Child</h3>
+                <p class="price">$38.00</p>
+                <button class="action-btn" onclick="handlePurchase(this)">Buy</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Vortex</h4>
+                <p style="color:#aaa; font-size:0.9em; font-weight:300;">Unlock the mysteries of the universe.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="journey.html">Fortune Path</a></li>
+                    <li><a href="p-reading.html">Personal Readings</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p style="color:#aaa; font-size:0.9em; font-weight:300;">Subscribe for cosmic updates.</p>
+                <div class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Your email">
+                    <a href="accept.html">
+                    <button class="newsletter-btn">Join</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Vortex Tarot. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

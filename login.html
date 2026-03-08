@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Vortex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Your_Future_Will_Be_Bright____Black___Nikury_Sticker-removebg-preview.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 380px;
+            padding: 40px 30px;
+            background: #0a0a0a;
+            border: 1px solid #222;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(255, 182, 193, 0.05);
+            margin: 20px;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2em;
+            color: #FFB6C1;
+            text-decoration: none;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(255, 182, 193, 0.6);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 0.85em;
+            color: #666;
+            margin-bottom: 35px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.75em;
+            color: #FFB6C1;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px;
+            background: #141414;
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #FFB6C1;
+            background: #1a1a1a;
+        }
+
+        .forgot-pass {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+
+        .forgot-pass a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.8em;
+            transition: color 0.3s;
+        }
+
+        .forgot-pass a:hover {
+            color: #FFB6C1;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background: transparent;
+            border: 1px solid #FFB6C1;
+            color: #FFB6C1;
+            border-radius: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        .login-btn:hover {
+            background: #FFB6C1;
+            color: #000;
+            box-shadow: 0 0 20px rgba(255, 182, 193, 0.4);
+        }
+
+        .signup-link {
+            margin-top: 30px;
+            font-size: 0.85em;
+            color: #888;
+        }
+
+        .signup-link a {
+            color: #FFB6C1;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                border: none;
+                background: transparent;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <a href="index.html" class="logo">Vortex</a>
+        <p class="subtitle">Enter the abyss</p>
+
+        <form action="reading.html">
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="oracle@vortex.com" required>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" placeholder="••••••••" required>
+            </div>
+
+            <div class="forgot-pass">
+                <a href="forgot.html">Forgot password?</a>
+            </div>
+      
+            <button type="submit" class="login-btn">Login</button>
+   
+        </form>
+
+        <div class="signup-link">
+            New to the circle? <a href="register.html">Register</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Vortex</title>
+       <link rel="icon" type="image/x-icon" href="Your_Future_Will_Be_Bright____Black___Nikury_Sticker-removebg-preview.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 60px 5%;
+            color: #FFFFFF;
+            flex: 1;
+        }
+
+        .page-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3em;
+            color: #FFFFFF;
+            text-shadow: 0 0 15px #FFB6C1;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .page-subtitle {
+            color: #aaa;
+            margin-bottom: 40px;
+            font-weight: 300;
+            max-width: 600px;
+        }
+
+        .contact-form {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            background-color: #0a0a0a;
+            border: 1px solid #222;
+            border-radius: 8px;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #FFB6C1;
+            box-shadow: 0 0 10px rgba(255, 182, 193, 0.2);
+        }
+
+        .submit-btn {
+            background-color: transparent;
+            color: #FFB6C1;
+            border: 1px solid #FFB6C1;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2px;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #FFB6C1;
+            color: #000000;
+        }
+
+        footer {
+            background-color: #050505;
+            border-top: 1px solid #222;
+            padding: 50px 5%;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section h4 {
+            color: #FFB6C1;
+            margin-bottom: 20px;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+            font-weight: 300;
+            font-size: 0.9em;
+        }
+
+        .footer-section a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #FFB6C1;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .newsletter-input {
+            padding: 8px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 4px;
+            flex-grow: 1;
+        }
+
+        .newsletter-btn {
+            background-color: #FFB6C1;
+            color: #000;
+            border: none;
+            margin-top: 2px;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8em;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            color: #555;
+            font-size: 0.85em;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.2em;
+            }
+            .search-container {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <div class="nav-top-row">
+            <a href="index.html" class="logo">Vortex</a>
+            
+            <div class="mobile-right-group">
+                <div class="menu-toggle" id="mobileMenu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-center-group" id="navCenter">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reading.html">Oracle</a></li>
+                <li><a href="journey.html">Journey</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container contact-container">
+        <h2 class="page-title">Reach Out</h2>
+        <p class="page-subtitle">Have questions about our decks or readings? Fill out the form below.</p>
+        
+        <form action="accept.html" class="contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Vortex</h4>
+                <p style="color:#aaa; font-size:0.9em; font-weight:300;">Unlock the mysteries of the universe.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="journey.html">Fortune Path</a></li>
+                    <li><a href="p-reading.html">Personal Readings</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p style="color:#aaa; font-size:0.9em; font-weight:300;">Subscribe for cosmic updates.</p>
+                <div class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Your email">
+                    <a href="accept.html">
+                    <button class="newsletter-btn">Join</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Vortex Tarot. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+    const mobileMenu = document.querySelector('#mobileMenu');
+    const navCenter = document.querySelector('#navCenter');
+
+    mobileMenu.addEventListener('click', () => {
+        navCenter.classList.toggle('active');
+    });
+</script>
+</body>
+</html>

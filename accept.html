@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Vortex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #FFB6C1 0%, #000000 100%);
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+
+        .thank-you-card {
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid #FFB6C1;
+            border-radius: 15px;
+            padding: 50px 30px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 0 20px rgba(255, 182, 193, 0.2);
+        }
+
+        .status-circle {
+            width: 80px;
+            height: 80px;
+            border: 4px double #FFB6C1;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: #FFB6C1;
+        }
+
+        h1 {
+            color: #FFB6C1;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 35px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .static-loader {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 40px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: #FFB6C1;
+            border-radius: 50%;
+        }
+
+        .dot-dim {
+            opacity: 0.3;
+        }
+
+        .home-btn {
+            display: block;
+            text-decoration: none;
+            color: #000000;
+            background: #FFB6C1;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .home-btn:hover {
+            background: #ffffff;
+        }
+
+        @media (max-width: 480px) {
+            .thank-you-card {
+                padding: 40px 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="thank-you-card">
+        <div class="status-circle">✉</div>
+        
+        <h1>Thank You</h1>
+        
+        <p>Your request is in the stars. We are processing your order and sending the email shortly.</p>
+        
+        <div class="static-loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot dot-dim"></div>
+        </div>
+
+        <a href="index.html" class="home-btn">Return to Shop</a>
+    </div>
+
+</body>
+</html>

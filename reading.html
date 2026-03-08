@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex Tarot | The Oracle</title>
+     <link rel="shortcut icon" href="Your_Future_Will_Be_Bright____Black___Nikury_Sticker-removebg-preview.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Updated font to match your previous login/dashboard pages */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            border-bottom: 1px solid #222;
+            position: relative;
+            background: #000;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: lightpink;
+            font-size: 1.5rem;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            border: none;
+            background: none;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: lightpink;
+            transition: 0.3s;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ffffff;
+            margin-left: 30px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            transition: 0.3s;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: lightpink;
+        }
+
+        .oracle-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, #1a0b0e 0%, #000000 100%);
+            padding: 60px 20px;
+            perspective: 1000px;
+        }
+
+        .tarot-card {
+            width: 90%;
+            max-width: 320px;
+            aspect-ratio: 2 / 3;
+            background: #000;
+            border: 2px solid lightpink;
+            border-radius: 15px;
+            padding: 15px;
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s ease;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(255, 182, 193, 0.1);
+        }
+
+        .tarot-card:hover {
+            transform: scale(1.02) translateY(-10px);
+            border-color: #ffffff;
+            box-shadow: 0 0 40px rgba(255, 182, 193, 0.3);
+        }
+
+        .card-inner {
+            border: 1px solid rgba(255, 182, 193, 0.3);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .symbol {
+            font-size: clamp(3rem, 10vw, 5rem);
+            color: lightpink;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: lightpink;
+            margin: 10px 0;
+            font-size: clamp(1rem, 5vw, 1.4rem);
+        }
+
+        .card-text {
+            color: #888;
+            font-size: clamp(0.75rem, 3vw, 0.9rem);
+            line-height: 1.6;
+        }
+
+        .draw-btn {
+            margin-top: 40px;
+            padding: 18px 50px;
+            border: 2px solid lightpink;
+            background: transparent;
+            color: lightpink;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 50px;
+            transition: 0.3s;
+            text-decoration: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .draw-btn:hover {
+            background: lightpink;
+            color: #000;
+            box-shadow: 0 0 20px rgba(255, 182, 193, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.7rem;
+            color: #444;
+            border-top: 1px solid #111;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #000;
+                flex-direction: column;
+                padding: 20px 0;
+                border-bottom: 1px solid #222;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 15px 0;
+                font-size: 1rem;
+            }
+
+            .oracle-container {
+                padding: 40px 15px;
+            }
+
+            .tarot-card {
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">VORTEX</div>
+        <button class="hamburger" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="p-reading.html">Personal reading</a>
+            <a href="journey.html">Journey</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+
+    <main class="oracle-container">
+        <div class="tarot-card" id="main-card">
+            <div class="card-inner">
+                <div class="symbol" id="card-icon">✦</div>
+                <h2 class="card-title" id="card-title">The Path</h2>
+                <p class="card-text" id="card-desc">Focus your energy. Interact with the card to begin your ascension.</p>
+            </div>
+        </div>
+        
+        <button class="draw-btn" onclick="enterVortex()">Draw Card</button>
+    </main>
+
+    <footer>
+        <p>© 2026 Vortex Tarot • Digital Divination</p>
+    </footer>
+
+    <script>
+        const tarotDeck = [
+            { name: "The Fool", symbol: "🃏", meaning: "New beginnings, innocence, and a leap of faith." },
+            { name: "The Magician", symbol: "✨", meaning: "Manifestation, resourcefulness, and power." },
+            { name: "The High Priestess", symbol: "🌙", meaning: "Intuition, mystery, and subconscious knowledge." },
+            { name: "The Empress", symbol: "🌿", meaning: "Femininity, nature, and abundance." },
+            { name: "The Emperor", symbol: "👑", meaning: "Authority, structure, and a solid foundation." },
+            { name: "The Hierophant", symbol: "📜", meaning: "Tradition, spiritual wisdom, and conformity." },
+            { name: "The Lovers", symbol: "💖", meaning: "Love, harmony, and significant choices." },
+            { name: "The Chariot", symbol: "⚔️", meaning: "Direction, control, and willpower." },
+            { name: "Strength", symbol: "🦁", meaning: "Courage, persuasion, and inner influence." },
+            { name: "The Hermit", symbol: "🕯️", meaning: "Soul-searching, introspection, and solitude." },
+            { name: "Wheel of Fortune", symbol: "🎡", meaning: "Luck, karma, and life cycles." },
+            { name: "Justice", symbol: "⚖️", meaning: "Fairness, truth, and cause and effect." },
+            { name: "The Hanged Man", symbol: "⚓", meaning: "Pause, surrender, and letting go." },
+            { name: "Death", symbol: "💀", meaning: "Endings, change, and transformation." },
+            { name: "Temperance", symbol: "🏺", meaning: "Balance, patience, and moderation." },
+            { name: "The Devil", symbol: "🔥", meaning: "Shadow self, attachment, and addiction." },
+            { name: "The Tower", symbol: "⚡", meaning: "Sudden change, upheaval, and revelation." },
+            { name: "The Star", symbol: "⭐", meaning: "Hope, faith, and inspiration." },
+            { name: "The Moon", symbol: "🌑", meaning: "Illusion, fear, and intuition." },
+            { name: "The Sun", symbol: "☀️", meaning: "Positivity, warmth, and success." },
+            { name: "Judgement", symbol: "🎺", meaning: "Rebirth, absolution, and calling." },
+            { name: "The World", symbol: "🌍", meaning: "Completion, integration, and travel." }
+        ];
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        function enterVortex() {
+            const cardIcon = document.getElementById('card-icon');
+            const cardTitle = document.getElementById('card-title');
+            const cardDesc = document.getElementById('card-desc');
+            const cardElement = document.getElementById('main-card');
+
+            const randomCard = tarotDeck[Math.floor(Math.random() * tarotDeck.length)];
+
+            cardElement.style.opacity = "0";
+            cardElement.style.transform = "scale(0.8) rotateY(90deg)";
+
+            setTimeout(() => {
+                cardIcon.innerText = randomCard.symbol;
+                cardTitle.innerText = randomCard.name;
+                cardDesc.innerText = randomCard.meaning;
+
+                cardElement.style.opacity = "1";
+                cardElement.style.transform = "scale(1) rotateY(0deg)";
+            }, 400);
+        }
+    </script>
+</body>
+</html>
